@@ -24,7 +24,7 @@
 
 </head>
 <body>
-  <div id="preloader"></div>
+  
  
     <div id="top-bar" class="top-bar">
         <div class="container">
