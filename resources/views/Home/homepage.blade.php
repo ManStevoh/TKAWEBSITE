@@ -11,16 +11,7 @@
 <head>
 
  @include('Home.homecss')
- <style type="text/css">
-   #preloader{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    background: #333 url(/images/loader/loader35.gif) no-repeat center center;
-    background-size: 10%;
-    z-index: 100;
-   }
- </style>
+ 
 
 </head>
 <body>
