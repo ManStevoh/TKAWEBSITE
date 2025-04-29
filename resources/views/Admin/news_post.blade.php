@@ -4,6 +4,10 @@
 <head>
     @include('Admin.headcss')
 
+    {{-- CKEditor CDN --}}
+<script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+
+
 </head>
 
 <body id="page-top">
@@ -54,48 +58,65 @@
                  @endif
 
             <!-- form start-->
-                    <div class="container">
-                  <form action="{{url('add_news')}}" method="POST" enctype="multipart/form-data">
-              @csrf
-                      <div class="logo">
-                          
-                          <h2>Add Blog</h2>
-                      </div>
-                      
-                      <!--<select id="select">
-                          <option value="news" id="news"><a href="news.html">News</a></option>
-                          <option value="blog" id="Blog"><a href="news.html">Blog</a></option>
-                          <option value="event" id="event"><a href="news.html">Event</a></option>
-                      </select>-->
-                      <div class="input">
-                          <input type="text" required="required" id="title" name="title">
-                          <span><i class='bx bx-edit'></i> Enter Title</span>
-                      </div>
-                      <div class="input">
-                          <textarea name="description" id="content" placeholder="Description..." required="required" class="ckeditor">
-                          </textarea>
-                      </div>
-                      <div>
-                          <h4>Add image</h4>
-                          <input type="file" required="required" id="image" name="image">
-                      </div>
-                      <div class="input">
-                          <input type="submit" required="required" value="Submit" onclick="Function()" id="submit">
-                      </div>
-                  </form>
-              </div>
+                  
               <!-- form end-->
+
+              <div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Add Blogs</h1>
+    </div>
+
+    <!-- Form -->
+    <div class="row">
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">New Blog</h6>
+                </div>
+                <div class="card-body">
+                <form action="{{url('add_news')}}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label"> Enter Title</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" name="title" placeholder="Enter Title" required>
+                            </div>
+                        </div>
+
+                    
+
+                        <div class="form-group row">
+                            <label for="message" class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="description" id="message" rows="3" placeholder="Description" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="file" class="col-sm-2 col-form-label">Upload image</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control" id="file" name="image">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-10 offset-sm-2">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
      </div>
-
-
-
-
-
-
-
-
-
-                     <!--------
+                    <!--------
             ======================================================================================================================================================
             FORMS END
             ======================================================================================================================================================
@@ -149,6 +170,20 @@
     <script src="admin2css/js/demo/chart-area-demo.js"></script>
     <script src="admin2css/js/demo/chart-pie-demo.js"></script>
     <script src="public/ckeditor/ckeditor.js"></script>
+
+    
+<script>
+    ClassicEditor
+    .create( document.querySelector( '#message' ) )
+    .catch( error => {
+    console.error( error );
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" ></script>
+
 </body>
 
 </html>

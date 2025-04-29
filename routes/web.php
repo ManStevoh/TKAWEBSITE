@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\EnrolmentForm;
 use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\BannerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -92,6 +93,14 @@ Route::get('/user_profile', [HomeController::class, 'user_profile']);
 To control TEAM PAGE
 ====================================================================================
 */
+
+Route::get('/banners', [BannerController::class, 'create'])->name('banners.create');
+Route::get('/banners/create', [BannerController::class, 'create'])->name('banners.create');
+Route::post('/banners', [BannerController::class, 'store'])->name('banners.store');
+Route::get('/banners/{id}/edit', [BannerController::class, 'edit'])->name('banners.edit');
+Route::put('/banners/{id}', [BannerController::class, 'update'])->name('banners.update');
+Route::delete('/banners/{id}', [BannerController::class, 'destroy'])->name('banners.destroy');
+
 
 /*
 ======================================================================================

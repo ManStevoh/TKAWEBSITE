@@ -126,6 +126,24 @@
             <div class="sidebar-heading">
                 Addons
             </div>
+                      <!-- New Nav Item - Pages Collapse Menu -->
+                                    <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBanners"
+                        aria-expanded="true" aria-controls="collapseBanners">
+                        <i class="fas fa-fw fa-image"></i>
+                        <span>Banner</span>
+                    </a>
+                    <div id="collapseBanners" class="collapse" aria-labelledby="headingBanners" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Sliders:</h6>
+                            <a class="collapse-item" href="{{ url('/banners/access') }}">New Banner</a>
+                            <a class="collapse-item" href="{{ url('show_banners') }}">Banner Overview</a>
+                        </div>
+                    </div>
+                </li>
+
+
+
 
             <!-- Nav Item - Pages Collapse Menu -->
          <li class="nav-item">

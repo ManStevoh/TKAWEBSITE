@@ -56,6 +56,7 @@
     @include('Home.headersection')
 
 <!-----header section------>
+
 @include('Home.bannersection')
 <!---banner serction------>
 <section class="call-to-action-box no-padding">

@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('background_image'); // for example: 'images/slider-main/slider_1.png'
             $table->string('title');             // for example: 'Welcome to Tech Kidz Africa'
             $table->string('subtitle');          // for example: 'We nurture technological skills...'
-            $table->string('button1_text')->nullable(); // button 1 text (e.g., 'Our Services')
-      
+            
             $table->timestamps();                      // created_at and updated_at
         });
     }
