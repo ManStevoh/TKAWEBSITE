@@ -70,24 +70,54 @@
       </div><!-- Row end -->
 
       <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/658eec968d261e1b5f4d6b1a/default';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
+      <script>
+    const iframe = document.createElement("iframe");
+
+    // Function to add styles
+    const iframeStyles = (styleString) => {
+        const style = document.createElement('style');
+        style.textContent = styleString;
+        document.head.append(style);
+    };
+
+    // Applying styles for the iframe
+    iframeStyles(`
+        .chat-frame {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            z-index: 1000;
+            border: none;
+        }
+    `);
+
+    // Setting the iframe source and class
+    iframe.src = "http://13.49.246.192:3000/chatbot";
+    iframe.classList.add('chat-frame');
+    document.body.appendChild(iframe);
+
+    // Listening for message events
+    window.addEventListener("message", (e) => {
+        // Verifying the source of the message
+        if (e.origin !== "http://13.49.246.192:3000") return;
+
+        // Parsing the data for iframe dimensions
+        let dimensions = JSON.parse(e.data);
+        iframe.width = dimensions.width;
+        iframe.height = dimensions.height;
+
+        // Sending a message to the iframe
+        iframe.contentWindow.postMessage("37da9d86-fcdd-42e6-bbdb-6295050010ef", "http://13.49.246.192:3000/");
+    });
+</script>
+
   <!--End of Tawk.to Script-->
 
-      <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+      <!-- <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
         <button class="btn btn-primary" title="Back to Top">
           <i class="fa fa-angle-double-up"></i>
         </button>
-      </div>
+      </div> -->
 
     </div><!-- Container end -->
   </div><!-- Copyright end -->
