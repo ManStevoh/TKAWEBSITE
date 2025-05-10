@@ -17,7 +17,8 @@
     </div>
   </div>
   @foreach(array_slice($new->all(), 0, 4) as $news)
-  <div class="banner-carousel-item" style="background-image:url(/newsimage/{{$news->image}})">
+  <div class="banner-carousel-item" style="background-image:url(/newsimage/{{$news->image}}); ">
+  
     <div class="slider-content">
         <div class="container h-100">
           <div class="row align-items-center h-100">
