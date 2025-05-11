@@ -101,6 +101,8 @@
                         </div>
                     </div>
 
+      <!--form ends-->
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -139,9 +141,7 @@
 
     <!-- CKEditor and Custom Scripts -->
     <script>
-        // Initialize CKEditor
-
-        
+        // Initialize CKEditor    
         ClassicEditor
     .create(document.querySelector('#editor'), {
         toolbar: {

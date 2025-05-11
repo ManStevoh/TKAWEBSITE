@@ -88,7 +88,7 @@
             </div><!-- header end -->
 
             <div class="entry-content">
-                <p>{{$news->description}}</p>
+                <p>{!!$news->description!!}</p>
             </div>
             <h1 style="font-size: 16px;">Venue: {{$news->venue}}</h1>
 

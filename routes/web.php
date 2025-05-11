@@ -8,6 +8,8 @@ use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\EnrolmentForm;
 use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\CkEditor;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -79,6 +81,8 @@ Route::get('/delete_event/{id}', [AdminController::class, 'delete_event']);
 Route::get('/update_event/{id}', [AdminController::class, 'update_event']);  
 Route::post('/edit_events/{id}', [AdminController::class, 'edit_events']);
 
+//CAK EDITOR END POINT
+Route::post('/upload-image', [CkEditor ::class, 'uploadImage'])->name('upload-image');
 
 /*delete_program
 ======================================================================================

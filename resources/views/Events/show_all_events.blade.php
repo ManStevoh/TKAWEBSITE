@@ -66,7 +66,7 @@
                     @foreach($post as $posts)
                     <tr>
                               <td>{{$posts->title}}</td>
-                              <td>{{ Str::limit($posts->description, 70, '...') }}</td>
+                              <td>{!! Str::limit($posts->description, 70, '...') !!}</td>
                               <td>{{$posts->name}}</td>
                               <td>{{$posts->post_status}}</td>
                               <td>{{$posts->usertype}}</td>

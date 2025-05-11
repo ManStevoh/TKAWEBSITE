@@ -144,7 +144,7 @@ END OF  a new ADMIN2
     //team page
     public function team_page()
     {
-        $team1 = team::orderBy('created_at', 'asc')->paginate(10);
+        $team1 = team::orderBy('created_at', 'desc')->paginate(8);
         return view('Home.team_page', compact('team1'));
     }
 

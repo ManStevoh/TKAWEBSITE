@@ -176,7 +176,7 @@
                     <tr>
                             <td>{{$posts->title}}</td>
                               
-                              <td class="description-cell">{{ Str::limit($posts->description, 20, '...') }}</td>
+                              <td class="description-cell">{!! Str::limit($posts->description, 20, '...') !!}</td>
                              <td>{{$posts->name}}</td>
                               <td>{{$posts->post_status}}</td>
                               <td>{{$posts->usertype}}</td>

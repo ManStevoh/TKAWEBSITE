@@ -89,7 +89,7 @@
             </div><!-- header end -->
 
             <div class="entry-content">
-              <p>{{$post->description}}</p>
+              <p>{!!$post->description!!}</p>
             </div>
 
             <div class="post-footer">

@@ -66,7 +66,7 @@
                     <tr>
                         <td>{{$teams->title}}</td>
                               <td>{{$teams->designation}}</td>
-                              <td class="description-cell">{{ Str::limit($teams->description, 20, '...') }}</td>
+                              <td class="description-cell">{!! Str::limit($teams->description, 20, '...')!!}</td>
                               <td>{{$teams->name}}</td>
                               <td>{{$teams->post_status}}</td>
                               <td>{{$teams->usertype}}</td>
