@@ -6,12 +6,7 @@
               <h2 class="into-title">About Us</h2>
               <h3 class="into-sub-title">Who we are?</h3>
               <p>
-              Tech Kidz Africa is a technology academy fostering the spirit of Silicon Valley among African children aged 4 to 18. 
-              Our mission is to nurture curiosity and innovation by tailoring software and robotic kits, providing hands-on coaching in technology.
-
-            In addition to empowering children, we also focus on training and building the capacity of teachers.
-             We equip educators with technology skills, including artificial intelligence, and teach them how to effectively integrate technology into learning. 
-             Through this dual approach, we aim to create a holistic tech-savvy community that bridges the digital divide and prepares future innovators.
+             Tech Kidz Africa is an edtech Academy, innovation hub and social enterprise that nurtures the spirit of innovativeness through empowering learners,capacity building educators, digital learning resources development and offering digital literacy employability skills.
               </p>
           </div><!-- Intro box end -->
 
