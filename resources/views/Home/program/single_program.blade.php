@@ -85,7 +85,7 @@
 
           <div class="row">
             <div class="col-md-12">
-              <p>{{$programs->description}}</p>
+              <p>{!!$programs->description!!}</p>
             </div><!-- col end -->
           </div><!-- 1st row end-->
 
@@ -98,108 +98,13 @@
 
             
           </div><!-- Page slider end -->
-
-          <div class="gap-40"></div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <h3 class="column-title-small">What Makes Us Different</h3>
-
-              <p>At Tech Kidz Africa, we are redefining tech education for young minds by combining a unique blend of innovation, creativity, and leadership. Our programs are designed not just to impart technical skills, but to inspire a passion for learning and problem-solving in the digital age. We believe in nurturing the leaders of tomorrow by providing them with the tools they need to succeed in a rapidly evolving world.</p>
-              <ul class="list-arrow">
-                <li>Innovative Curriculum tailored for future-focused skills.</li>
-                <li>Strategic Partnerships with leading tech organizations.</li>
-                <li>Leadership Development through practical tech education.</li>
-                <li>Holistic Approach balancing technical skills with creativity.</li>
-                <li>State-of-the-Art Facilities for an enhanced learning experience.</li>
-
-              </ul>
-            </div>
-
-            <div class="col-md-6 mt-5 mt-md-0">
-              <h3 class="column-title-small">You Should Know</h3>
-
-              <div class="accordion accordion-group accordion-classic" id="construction-accordion">
-                <div class="card">
-                  <div class="card-header p-0 bg-transparent" id="headingOne">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Beginner Level
-                      </button>
-                    </h2>
-                  </div>
-
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#construction-accordion">
-                    <div class="card-body">
-                     No of Sesions: {{$programs->beginner_sessions}} <hr>
-                    
-                      Price ksh: {{$programs->beginner_price}}
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header p-0 bg-transparent" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Intermediate Level
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                    data-parent="#construction-accordion">
-                    <div class="card-body">
-                       No of Sesions: {{$programs->intermediate_sessions}} 
-                       <hr>
-                      Price ksh: {{$programs->intermediate_price}}
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header p-0 bg-transparent" id="headingThree">
-                    <h2 class="mb-0">
-                      <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Advanced Level
-                      </button>
-                    </h2>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-parent="#construction-accordion">
-                    <div class="card-body">
-                      No of Sesions: {{$programs->advanced_sessions}} 
-                      <hr>
-                      Price ksh: {{$programs->advanced_price}}
-                    </div>
-                  </div>
-                </div>
-               <!-- New Button and Content -->
-                <div class="card">
-                    <div class="card-header p-0 bg-transparent" id="headingFour">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                Expert Level
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                        data-parent="#construction-accordion">
-                        <div class="card-body">
-                            No of Sesions: {{$programs->expert_sessions}} 
-                            <hr>
-                            Price ksh: {{$programs->expert_price}}
-                        </div>
-                    </div>
-                </div>
-                </div>
+             
+                     
               <!--/ Accordion end -->
             </div>
           </div>
           <!--2nd row end -->
-
+</div>
           <div class="gap-40"></div>
 
           <div class="call-to-action classic">

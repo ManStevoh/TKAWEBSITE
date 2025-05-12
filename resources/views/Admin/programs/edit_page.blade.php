@@ -3,6 +3,8 @@
 
 <head>
     @include('Admin.headcss')
+        <!-- CKEditor CDN -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
     <style>
     .container2 {
         width: 80%;
@@ -91,93 +93,87 @@
 
                  @endif
 
-           <!-- form start-->
-<div class="container2">
-    <form action="{{url('program_edit',$program->id)}}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div class="logo">
-            <h2>Add New Program</h2>
-        </div>
-        
-        <!-- Input for title -->
-        <div class="input">
-            <input type="text" required="required" id="title" name="title" value="{{$program->title}}">
-            <span><i class='bx bx-edit'></i> Enter Title</span>
-        </div>
-        
-        <!-- Textarea for description -->
-        <div class="input">
-            <textarea name="description" id="description" placeholder="Description..." required="required">{{$program->description}}</textarea>
-        </div>
-        
-        
-        
-        <!-- Level Details -->
-        <div class="level-details">
-            <h3>Beginner Level</h3>
-            <div class="input">
-                <label for="beginner_price">Price:</label>
-                <input type="number" id="beginner_price" name="beginner_price" value="{{$program->beginner_price}}" required>
-            </div>
-            <div class="input">
-                <label for="beginner_sessions">Number of Sessions:</label>
-                <input type="number" id="beginner_sessions" name="beginner_sessions" value="{{$program->beginner_sessions}}" required>
-            </div>
+                 
+                    <!-- Add Blog Form Section -->
+                    <div class="container-fluid">
+                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                            <h1 class="h3 mb-0 text-gray-800">Update Program</h1>
+                        </div>
 
-            <h3>Intermediate Level</h3>
-            <div class="input">
-                <label for="intermediate_price">Price:</label>
-                <input type="number" id="intermediate_price" name="intermediate_price" value="{{$program->intermediate_price}}" required>
-            </div>
-            <div class="input">
-                <label for="intermediate_sessions">Number of Sessions:</label>
-                <input type="number" id="intermediate_sessions" name="intermediate_sessions" value="{{$program->intermediate_sessions}}" required>
-            </div>
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-7">
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Update Program</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="{{url('program_edit',$program->id)}}" method="POST" enctype="multipart/form-data">
+                                            @csrf
 
-            <h3>Advanced Level</h3>
-            <div class="input">
-                <label for="advanced_price">Price:</label>
-                <input type="number" id="advanced_price" name="advanced_price" value="{{$program->advanced_price}}" required>
-            </div>
-            <div class="input">
-                <label for="advanced_sessions">Number of Sessions:</label>
-                <input type="number" id="advanced_sessions" name="advanced_sessions" value="{{$program->advanced_sessions}}" required>
-            </div>
+                                            <div class="form-group row">
+                                                <label for="title" class="col-sm-2 col-form-label">Title</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" value="{{$program->title}}" required>
+                                                </div>
+                                            </div>
 
-            <h3>Expert Level</h3>
-            <div class="input">
-                <label for="expert_price">Price:</label>
-                <input type="number" id="expert_price" name="expert_price" value="{{$program->expert_price}}" required>
-            </div>
-            <div class="input">
-                <label for="expert_sessions">Number of Sessions:</label>
-                <input type="number" id="expert_sessions" name="expert_sessions" value="{{$program->expert_sessions}}" required>
-            </div>
-        </div>
-        
-         <!---to show old image---->
-         <div class="div_center">
-               <label>Old Image</label>
-              <img style="margin: auto;" height="100px" width="150px" src="{{ asset($program->image) }}">
-        </div>
-       <!---end----->
-        <!-- Input for image -->
-        <div class="input">
-            <h4>Add New Image</h4>
-            <input type="file"  id="image" name="image">
-        </div>
-        
-        <!-- Submit button -->
-        <div class="input">
-            <input type="submit" required="required" value="Submit" id="submit">
-        </div>
-    </form>
-</div>
-     </div>
+                                            <div class="form-group row">
+                                                <label for="editor" class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-10">
+                                                    <textarea class="form-control" name="description" id="editor" rows="5" placeholder="Description">{!!$program->description!!}</textarea>
+                                                </div>
+                                            </div>
+
+                                              <!-- Old Image Preview -->
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 col-form-label">Current Image</label>
+                                                    <div class="col-sm-10">
+                                                        @if($program->image)
+                                                        <div class="current-image-preview">
+                                                            <img src="{{ asset($program->image) }}" alt="Current Image" class="img-thumbnail" style="max-height: 200px;">
+                                                            <div class="mt-2">
+                                                                <small class="text-muted">Current featured image</small>
+                                                            </div>
+                                                        </div>
+                                                        @else
+                                                        <div class="text-muted">No image currently set</div>
+                                                        @endif
+                                                    </div>
+                                                </div>
 
 
+                                            <div class="form-group row">
+                                                <label for="image" class="col-sm-2 col-form-label">Featured Image</label>
+                                                <div class="col-sm-10">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="image" name="image" accept="image/*">
+                                                        <label class="custom-file-label" for="image">Choose file</label>
+                                                    </div>
+                                                    <small class="form-text text-muted">Max size: 2MB | Recommended ratio: 16:9</small>
+                                                    <div class="image-preview mt-2" id="imagePreview" style="display:none;">
+                                                        <img src="" alt="Image Preview" class="img-thumbnail" id="previewImage" style="max-height: 200px;">
+                                                    </div>
+                                                </div>
+                                            </div>
 
+                                            <div class="form-group row">
+                                                <div class="col-sm-10 offset-sm-2">
+                                                    <button type="submit" class="btn btn-primary mr-2">
+                                                        <i class="fas fa-save mr-1"></i> Save Program
+                                                    </button>
+                                                    <button type="reset" class="btn btn-secondary">
+                                                        <i class="fas fa-undo mr-1"></i> Reset
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+      <!--form ends-->
 
 
 
@@ -219,6 +215,54 @@
     @include('Admin.logoutmodal')
     <!-- Logout Modal-->
   
+ <script>
+        // Initialize CKEditor    
+        ClassicEditor
+    .create(document.querySelector('#editor'), {
+        toolbar: {
+            items: [
+                'heading', '|',
+                'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+                'blockQuote', 'insertTable', 'undo', 'redo', '|',
+                'imageUpload' // Removed 'codeBlock'
+            ]
+        }
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
+        // Image preview functionality
+        document.getElementById('image').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('previewImage');
+            const previewContainer = document.getElementById('imagePreview');
+            
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    previewContainer.style.display = 'block';
+                }
+                
+                reader.readAsDataURL(file);
+                document.querySelector('.custom-file-label').textContent = file.name;
+            } else {
+                preview.src = '';
+                previewContainer.style.display = 'none';
+                document.querySelector('.custom-file-label').textContent = 'Choose file';
+            }
+        });
+
+        // Dismiss alert after 5 seconds
+        setTimeout(function() {
+            $('.alert').alert('close');
+        }, 5000);
+    </script>
+
+    <script>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="admin2css/vendor/jquery/jquery.min.js"></script>

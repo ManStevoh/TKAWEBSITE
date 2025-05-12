@@ -55,14 +55,6 @@
                                     <tr>
                                         <th>Title</th>
                                         <th>Description</th>
-                                        <th>Beginner Price</th>
-                                        <th>Beginner Sessions</th>
-                                        <th>Intermediate Price</th>
-                                        <th>Intermediate Sessions</th>
-                                        <th>Advanced Price</th>
-                                        <th>Advanced Sessions</th>
-                                        <th>Expert Price</th>
-                                        <th>Expert Sessions</th>
                                         <th>Image</th>
                                         <th>Delete</th>
                                         <th>Edit</th>
@@ -72,15 +64,7 @@
                      @foreach($programs as $program)
                     <tr>
                         <td data-label="Title">{{ $program->title }}</td>
-                        <td data-label="Description" class="description-cell">{{ Str::limit($program->description, 20, '...') }}</td>
-                        <td data-label="Beginner Price">{{ $program->beginner_price }}</td>
-                        <td data-label="Beginner Sessions">{{ $program->beginner_sessions }}</td>
-                        <td data-label="Intermediate Price">{{ $program->intermediate_price }}</td>
-                        <td data-label="Intermediate Sessions">{{ $program->intermediate_sessions }}</td>
-                        <td data-label="Advanced Price">{{ $program->advanced_price }}</td>
-                        <td data-label="Advanced Sessions">{{ $program->advanced_sessions }}</td>
-                        <td data-label="Expert Price">{{ $program->expert_price }}</td>
-                        <td data-label="Expert Sessions">{{ $program->expert_sessions }}</td>
+                        <td data-label="Description" class="description-cell">{!! Str::limit($program->description, 15, '...') !!}</td>                    
                         <td data-label="Image">
                             @if($program->image)
                                  <img style="width: 100px; height: auto; max-height: 100px; object-fit: cover;" src="{{ asset($program->image) }}" alt="Program Image">

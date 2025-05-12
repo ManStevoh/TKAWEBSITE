@@ -88,8 +88,8 @@
             <div class="d-flex">
               
               <div class="ts-service-info">
-                  <h3 class="service-box-title"><a href="{{url('single_program',$program->id)}}">{{$program->title}}</a></h3>
-                  <p>{{ Str::limit($program->description, 100) }}</p>
+                  <h3 class="service-box-title"><a href="{{url('single_program',$program->id)}}">{{$program->title}} </a></h3>
+                  
                   <a class="learn-more d-inline-block" href="{{url('single_program',$program->id)}}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
               </div>
             </div>

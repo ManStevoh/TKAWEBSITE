@@ -41,14 +41,7 @@ class ProgramController extends Controller
         'title' => 'required|string|max:255',
         'description' => 'required|string',
         //'program' => 'required|string',
-        'beginner_price' => 'required|integer',
-        'beginner_sessions' => 'required|integer',
-        'intermediate_price' => 'required|integer',
-        'intermediate_sessions' => 'required|integer',
-        'advanced_price' => 'required|integer',
-        'advanced_sessions' => 'required|integer',
-        'expert_price' => 'required|integer',
-        'expert_sessions' => 'required|integer',
+       
         'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048' // Validate image (optional)
     ]);
 
@@ -72,14 +65,7 @@ class ProgramController extends Controller
         'title' => $validatedData['title'],
         'description' => $validatedData['description'],
         //'program' => $validatedData['program'],
-        'beginner_price' => $validatedData['beginner_price'],
-        'beginner_sessions' => $validatedData['beginner_sessions'],
-        'intermediate_price' => $validatedData['intermediate_price'],
-        'intermediate_sessions' => $validatedData['intermediate_sessions'],
-        'advanced_price' => $validatedData['advanced_price'],
-        'advanced_sessions' => $validatedData['advanced_sessions'],
-        'expert_price' => $validatedData['expert_price'],
-        'expert_sessions' => $validatedData['expert_sessions'],
+        
         'image' => $imagePath
     ]);
 
