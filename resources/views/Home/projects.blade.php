@@ -39,10 +39,11 @@
           <!-- Advancing Computing Literacy Images -->
           <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Advancing_Computing_Literacy&quot;]">
             <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/Internet_Safety_1.png" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/computing_literacy_1.png" alt="Computing Literacy Workshop">
+              <a class="gallery-popup" href="images/projects/ACLP LAUNCH 1.jpeg" aria-label="project-img">
+                <img class="img-fluid" src="images/projects/ACLP LAUNCH 1.jpeg" alt="Computing Literacy Workshop">
                 <span class="gallery-icon"><i class="fa fa-plus"></i></span>
               </a>
+              
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
@@ -53,17 +54,17 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Advancing_Computing_Literacy&quot;]">
             <div class="project-img-container">
-              <a class="gallery-popup" href="images/projects/computing_literacy_2.png" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/computing_literacy_2.png" alt="Students Learning Coding">
+              <a class="gallery-popup" href="images/projects/ACLP LAUNCH 1.jpeg" aria-label="project-img">
+                <img class="img-fluid" src="images/projects/Aclp_3.jpeg" alt="Computing Literacy Workshop">
                 <span class="gallery-icon"><i class="fa fa-plus"></i></span>
               </a>
+              
               <div class="project-item-info">
                 <div class="project-item-info-content">
                   <h3 class="project-item-title">
-                    <a href="#">Coding Fundamentals</a>
+                    <a href="#">Educator Empowernment</a>
                   </h3>
                   <p class="project-cat">Advancing Computing Literacy</p>
                 </div>
@@ -74,7 +75,23 @@
           <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Advancing_Computing_Literacy&quot;]">
             <div class="project-img-container">
               <a class="gallery-popup" href="images/projects/computing_literacy_3.png" aria-label="project-img">
-                <img class="img-fluid" src="images/projects/computing_literacy_3.png" alt="Computer Lab Session">
+                <img class="img-fluid" src="images/projects/Advancing Computing Literacy.jpg" alt="Computer Lab Session">
+                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
+              </a>
+              <div class="project-item-info">
+                <div class="project-item-info-content">
+                  <h3 class="project-item-title">
+                    <a href="#">Hands-on Learning</a>
+                  </h3>
+                  <p class="project-cat">Advancing Computing Literacy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Advancing_Computing_Literacy&quot;]">
+            <div class="project-img-container">
+              <a class="gallery-popup" href="images/projects/computing_literacy_3.png" aria-label="project-img">
+                <img class="img-fluid" src="images/projects/aclp_4.jpeg" alt="Computer Lab Session">
                 <span class="gallery-icon"><i class="fa fa-plus"></i></span>
               </a>
               <div class="project-item-info">
@@ -88,11 +105,13 @@
             </div>
           </div>
 
+
+
           <!-- Experience AI Images -->
           <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;Experience_AI&quot;]">
             <div class="project-img-container">
               <a class="gallery-popup" href="images/projects/Internet_Safety_1.png" aria-label="Experience AI">
-                <img class="img-fluid" src="images/projects/ai_experience_1.png" alt="AI Workshop">
+                <img class="img-fluid" src="#" alt="AI Workshop">
                 <span class="gallery-icon"><i class="fa fa-plus"></i></span>
               </a>
               <div class="project-item-info">
